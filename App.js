@@ -99,7 +99,7 @@ console.log(cart);
 
 
            
-      <h2>Wishlist ({wishlist.length}):</h2>
+      <h2>Wishlist({wishlist.length}):</h2>
       {wishlist.length === 0 ? <p>No items in wishlist</p> :
         wishlist.map((item) => (
           <div key={item.id}>
