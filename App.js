@@ -23,22 +23,20 @@ const reducer = ((state,action)=>{
         item.id === action.id ? { ...item, qty: item.qty + 1 } : item
       );
 
-       case "decrease":
+      case "decrease":
       return state.map((item) =>
         item.id === action.id && item.qty > 1
           ? { ...item, qty: item.qty - 1 }
           : item
       );
    
-
-
-       case "remove":
+      case "remove":
       return state.filter((item) => item.id !== action.id);
       case "addToWishlist":
       if (state.find(item => item.id === action.product.id)) return state; // Avoid duplicates
       return [...state, action.product];
 
-    case "removeFromWishlist":
+      case "removeFromWishlist":
       return state.filter(item => item.id !== action.id);
 
   }
