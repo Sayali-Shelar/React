@@ -41,9 +41,7 @@ const reducer = ((state,action)=>{
 
   }
 
-
 })
-
 
 const App = () => {
 const [cart, dispatch] = useReducer(reducer, initialState);
@@ -53,8 +51,6 @@ const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
 
 console.log(cart);
-
-  
 
   const products = [
   { id: 1, name: "Laptop", price: 50000 },
@@ -88,15 +84,12 @@ console.log(cart);
                       <button onClick={() => dispatch({ type: "increase", id: p.id })}> +</button>
                       <button onClick={() => dispatch({ type: "decrease", id: p.id })}>-</button>
                       <button onClick={() => dispatch({ type: "remove", id: p.id })} > ❌ Remove </button>
-
-
-                 </div>
+               </div>
               )
             })
            }
 
 
-           
       <h2>Wishlist({wishlist.length}):</h2>
       {wishlist.length === 0 ? <p>No items in wishlist</p> :
         wishlist.map((item) => (
