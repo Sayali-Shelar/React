@@ -1,0 +1,33 @@
+.FormMain{
+    display: flex;
+}
+.input{
+    flex: 1;
+    border-right: 1px solid black;
+    height: 400px;
+    padding: 30px;
+    background-color:powderblue;
+    justify-items: center;
+    
+
+}
+input{
+    padding: 10px;
+    padding-right: 180px;
+}
+
+.output{
+    flex: 1;
+    padding: 30px;
+    background-color: rgb(238, 197, 238);
+
+}
+.name{
+    text-align: center;
+    font-size: 2rem;
+}
+button{
+    padding: 10px  50px;
+    background-color: rgb(10, 155, 233);
+    margin-left: 80px;
+}
